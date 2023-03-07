@@ -1,0 +1,22 @@
+#输出被巡检的数据库信息（目前只支持MySQL）
+DBInfo:
+    driverName: mysql                                  #指定数据库类型
+    username: root                                   #指定连接数据库的用户名
+    password: ""                     #指定连接数据库的密码
+    host: db                                     #指定连接数据库的ip地址
+    port: 3306                                                    #指定连接数据库的port
+    database: information_schema                                  #指定默认连接的数据库，非必选项，
+    charset: utf8                                                 #指定连接数据库时的字符集
+    dbConnIdleTime: 100                                           #指定会话的空闲时间
+    maxIdleConns: 100                                             #指定最大的空闲连接数
+
+#巡检结果集输出
+ResultOutput:
+    outputWay: pdf                                                #将结果集汇总输出到pdf中，并产生可视化报告
+    outputPath: .\                                                 #生成的pdf的路径，全路径或当前绝对路径
+    outputFile: 巡检结果.pdf           #输出结果的pdf文件名
+    inspectionPersonnel: golang                                             #在pdf报告中会在巡检人员中显示该值
+    inspectionLevel: 正常巡检                                            #在pdf报告中会在巡检等级中显示该值
+
+# 是否尝试修复
+Repair: false
